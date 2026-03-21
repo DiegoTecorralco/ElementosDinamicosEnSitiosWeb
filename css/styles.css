@@ -1,1 +1,106 @@
 /** styles.css **/
+
+
+/*Contenedor Principal*/
+.hero{
+    display: flex; /*Organiza los elementos en fila (horizontal)*/
+    align-items: center; /*Alinea los elementos verticalmente al centro*/
+    justify-content: space-between; /*Distribuye los elementos horizontalmente con espacio entre ellos*/
+    padding: 70px 30px; /*Espacio interno del contenedor, 50px arriba/abajo, 30px izquierda/derecha*/
+}
+
+/* Contenedor del texto */
+.hero-text {
+    max-width:  500px; /*Limita el ancho del texto para mejorar la legibilidad*/
+}
+
+.titulo {
+    font-size: 55px;
+    font-family: Manrope;
+    font-weight: bold;
+    margin: 0;/*Elimina el margen por defecto que los navegadores aplican a los elementos <h1> para evitar espacios no deseados entre los títulos*/
+}
+.titulo-secundario {
+    color: #007B85;
+    font-weight: bold;
+    font-family: Manrope;
+    font-size: 55px;    
+    margin: 0; /*Elimina el margen por defecto que los navegadores aplican a los elementos <h1> para evitar espacios no deseados entre los títulos*/
+}
+
+.descripciones {
+    color: #3E494A;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Imagen */
+.hero-img img {
+    width: 700px; /* Tamaño fijo de la imagen */
+    height: 450px;
+    border-radius: 50px; /* Bordes redondeados para estilo moderno */
+}
+
+.navbar {
+    background-color: rgb(249, 255, 255);
+    display: flex; /*sirve para organizar elementos fácilmente en fila o columna, pone los elementos en horizontal, Se acomodan uno al lado del otro.*/
+    align-items: center; /*Alinea los elementos verticalmente al centro.*/
+    justify-content: space-between; /*Distribuye los elementos horizontalmente.*/
+    padding: 10px 30px;
+    font-family: Manrope;
+}
+
+/* Contenedor de los links del navbar */
+.navbar-links {
+    display: flex; /* Coloca los elementos <li> en fila (horizontal) */
+    gap: 20px;  /* Espacio entre cada link (separación uniforme) */
+    list-style: none; /* Quita los puntos (viñetas) del <ul> */
+    margin: 0; /* Elimina margen externo por defecto del navegador */
+    padding: 0; /* Elimina espacio interno por defecto del <ul> */
+    font-family: Inter;
+}
+
+/* Estilos para los enlaces (<a>) dentro del navbar */
+.navbar-links a {
+    text-decoration: none; /* Quita el subrayado de los links */
+    color: #475569;
+    font-weight: 500;      /* Hace el texto un poco más grueso (semi-bold) */
+    position: relative;   /* Necesario para posicionar el pseudo-elemento :after */
+}
+
+.navbar-links a.activo {
+    color: #007B85; /* Color diferente para el link seleccionado */
+    font-weight: bold; /* Hace el texto del link seleccionado más grueso */
+}
+
+.navbar-links a.activo:after {
+    content: "";/* Crea el pseudo-elemento (obligatorio). Aunque esté vacío, sin esto no aparece nada */
+    position: absolute; /* Permite posicionar la línea de forma libre dentro del <a> */
+    bottom: -6px; /* Coloca la línea debajo del texto (6px hacia abajo) */
+    left: 0;  /* Hace que la línea empiece desde el lado izquierdo del link */
+    width: 100%; /* La línea ocupa todo el ancho del link */
+    height: 3px; /* Define el grosor de la línea */
+    background: #007B85; 
+}
+
+.btn-reserva {
+    background: linear-gradient(to right, #006068, #007B85); /*Son los colores del degradado*/
+    border: none;
+    color: white;
+    border-radius: 15px; /*Hace que el botón sea redondeado*/
+    font-size: 18px;
+    padding: 10px 30px; /*Espacio interno del botón, 10px arriba/abajo, 30px izquierda/derecha*/
+    cursor: pointer; /*Hace que el cursor cambie a una manita cuando pasas encima.*/
+}
+
+.btn-recuperacion {
+    background-color: #006068;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: Inter;
+    cursor: pointer;
+}
