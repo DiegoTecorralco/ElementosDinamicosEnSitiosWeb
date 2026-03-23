@@ -10,7 +10,7 @@ El estudiante desarrollará un sitio web interactivo completo, implementando los
 - **Carrusel de Imágenes:** Galería automática o manual con mínimo 3 imágenes.
 
 ## Wireframes
-[Wireframes](https://www.figma.com/design/Os6npF4HAulI0nbkRTExk4/Clinica-Serenity?node-id=0-1&p=f&t=mgDItrM6wlmYaNQU-0)
+[Wireframes](https://www.figma.com/design/Os6npF4HAulI0nbkRTExk4/Clinica-Serenity?node-id=3-815&t=YzHNH3zQaH8bBpGj-1)
 
 ## Paleta de colores
 
