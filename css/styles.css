@@ -373,10 +373,10 @@ section {
 .panel {
     background-color: #FFFFFF;
     margin: 0;
+    text-align: center;
 }
 .panel-section {
     padding: 15px;
-    text-align: center;
 }   
 .panel-section h2 {
     font-family: Manrope;
@@ -397,6 +397,6 @@ section {
 }
 
 /* Clase específica para ocultar el panel */
-.panel.hidden-panel {
-    display: none;
+.hidden-panel {
+    display: none; 
 }
