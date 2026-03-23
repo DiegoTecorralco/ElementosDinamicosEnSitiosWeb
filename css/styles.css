@@ -1,12 +1,16 @@
 /** styles.css **/
-
+body {
+    background-color: #F1F4F4;
+    margin: 0 ; /* Elimina el margen por defecto que los navegadores aplican al cuerpo de la página para evitar espacios no deseados alrededor del contenido */
+}
 
 /*Contenedor Principal*/
 .hero{
     display: flex; /*Organiza los elementos en fila (horizontal)*/
-    align-items: center; /*Alinea los elementos verticalmente al centro*/
+    align-items: center; /*Alinea los element   os verticalmente al centro*/
     justify-content: space-between; /*Distribuye los elementos horizontalmente con espacio entre ellos*/
     padding: 70px 30px; /*Espacio interno del contenedor, 50px arriba/abajo, 30px izquierda/derecha*/
+    background-color: #FFFFFF;
 }
 
 /* Contenedor del texto */
@@ -97,10 +101,248 @@
 .btn-recuperacion {
     background-color: #006068;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 25px;
     color: white;
     border-radius: 15px;
     font-size: 16px;
     font-family: Inter;
     cursor: pointer;
+}
+
+/*Servicios que aparecen en la página de inicio*/
+
+.servicios-inicio{
+    padding: 80px 30px;
+}
+
+/*parrafo de Especialidades*/
+.servicios-inicio .p-resaltado { /* Selecciona cualquier elemento con la clase "p-resaltado" que esté DENTRO de un contenedor con la clase "servicios-inicio" */
+    font-family: Inter;
+    color:#007B85;
+    margin: 0; /*Elimina el marco por defecto que los navegadores aplican a los elementos <p> */
+    font-weight: bold;
+}
+
+.descripcion-general{
+    max-width: 700px;
+    font-family: Inter;
+    color: #3E494A;
+    margin-top: 15px; /*Espacio superior para separar del título*/
+}
+
+/*Subtitulo de servicios */
+.servicios-inicio h3 {
+    font-family: Manrope;
+    font-size: 40px;
+    margin: 0; /*Elimina el marco por defecto que los navegadores aplican a los elementos <p> */
+}
+
+.services-container {
+     display: grid; /* Utiliza CSS Grid para organizar las cards en una cuadrícula */
+    grid-template-columns: repeat(3, 1fr); /*  3 columnas */
+    gap: 25px; /* separación entre cards */
+    margin-top: 40px; /* separación con el texto */
+}
+
+.service-card.grande {
+    grid-column: span 2; /* ocupa 2 columnas */
+}
+.service-card.pequeña {
+    grid-column: span 1; /* ocupa 1 columnas */
+
+}
+
+.service-card { 
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* sombra suave tipo moderna */
+}
+.service-card h3 {
+    margin-top: 25px;
+    font-family: Manrope;
+    font-size: 24px;
+    margin-bottom: 15px; /*Espacio inferior para separar del texto*/
+}   
+
+.service-card p {
+    font-size: 16px;
+    color: #3E494A;
+    font-family: Inter;
+}
+
+.link-service-card {
+    display: inline-block; /* Hace que el elemento se comporte como texto (inline) pero permita aplicar ancho, alto y padding como un bloque */
+    font-family: Inter;
+    color: #006068;
+    font-size: 15px;
+    margin-top: 10px; /* Define la tipografía del texto usando la fuente Inter */
+}
+
+.link-service-card:hover {
+    color: #007B85;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: #006068;
+}  
+
+/*Seccion especialistas*/
+.especialistas {
+    padding: 100px 30px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+}
+
+.especialistas-container {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+}
+
+.especialistas-card .uno{
+    grid-column: span 1;
+}
+
+.especialistas-card .dos{
+    grid-column: span 1;
+}
+
+.especialistas-card .tres{
+    grid-column: span 1;
+}
+
+.especialistas-card .cuatro{
+    grid-column: span 1;
+}
+.especialistas .p-resaltado {
+    font-family: Inter;
+    color:#007B85;
+    margin: 0; /*Elimina el marco por defecto que los navegadores aplican a los elementos <p> */
+    font-weight: bold;
+}
+.especialistas h3{
+    font-family: Manrope;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.img-especialista img {
+    width: 280px;
+    height: 373.33px;
+    border-radius: 30px;
+}   
+
+.titulo-especialistas {
+    margin-top: 20px;
+    font-family: Manrope;
+     font-weight: bold;
+     margin-bottom: 0; /*Elimina el margen de abajo*/
+}
+
+.descripcion-especialista { 
+    font-family: Inter;
+    color: #3E494A;
+    margin: 0; /*elimina el margen por defecto de arriba*/
+}
+
+/* Footer principal */
+footer {
+    background-color: #0F172A; /* Color de fondo oscuro (azul muy oscuro) */
+    overflow: hidden; /* Evita que el contenido se desborde del footer */
+}
+
+/* Contenedor que agrupa todas las columnas */
+.footer-container {
+    display: flex; /* Coloca las columnas en fila (horizontal) */
+    justify-content: space-between; /* Separa las columnas con espacio entre ellas */
+    gap: 40px; /* Espacio entre cada columna */
+    padding: 64px 32px; /** Espacio interno del footer, 64px arriba/abajo, 32px izquierda/derecha */
+}
+
+/* Cada columna del footer */
+.section-footer {
+    max-width: 320px; /* Limita el ancho para que no se hagan muy grandes */
+}
+
+/* Título principal (nombre de la clínica) */
+footer h1 {
+    color: #FFFFFF; /* Texto blanco */
+    font-family: Inter; /* Fuente */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+/* Subtítulos (NAVEGACIÓN, NEWSLETTER) */
+footer h2 {
+    color: #2DD4BF; /* Color azul/cyan tipo diseño Figma */
+    font-family: Inter; /* Fuente */
+    font-size: 14px; /* Tamaño más pequeño */
+    letter-spacing: 2px; /* Espacio entre letras (para estilo moderno) */
+}
+
+/* Párrafos dentro del footer */
+footer p {
+    color: #94A3B8; /* Gris claro */
+    font-family: Inter; /* Fuente */
+    font-size: 14px; /* Tamaño del texto */
+    margin: 15px 0; /* Espacio arriba y abajo */
+}
+
+/* Lista de links */
+.footer-links {
+    list-style: none; /* Quita los puntos del <ul> */
+    padding: 0; /* Quita espacio interno */
+}
+
+/* Cada item de la lista */
+.footer-links li {
+    margin: 10px 0; /* Espacio entre cada link */
+}
+
+/* Links */
+.footer-links a {
+    text-decoration: none; /* Quita subrayado */
+    color: #94A3B8; /* Color gris */
+    font-family: Inter; /* Fuente */
+}
+
+/* Efecto al pasar el mouse */
+.footer-links a:hover {
+    color: #FFFFFF; /* Cambia a blanco */
+}
+
+/* Contenedor del input + botón */
+.newsletter {
+    display: flex; /* Coloca input y botón en fila */
+    margin-top: 10px; /* Espacio arriba */
+}
+
+/* Input del correo */
+.newsletter input {
+    flex: 1; /* Hace que el input ocupe todo el espacio disponible */
+    padding: 10px; /* Espacio interno */
+    border: none; /* Quita borde */
+    border-radius: 8px 0 0 8px; /* Bordes redondeados solo lado izquierdo */
+    background-color: #1E293B; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+}
+
+/* Botón del newsletter */
+.newsletter button {
+    background-color: #2DD4BF; /* Color azul */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espacio interno */
+    border-radius: 0 8px 8px 0; /* Bordes redondeados lado derecho */
+    cursor: pointer; /* Cambia el cursor a mano */
+}
+
+/* Texto de derechos */
+.p-derechos {
+    color: #94A3B8; /* Color gris */
+    text-align: center; /* Centrado */
+    padding: 20px 0; /* Espacio arriba y abajo */
+    border-top: 1px solid #1E293B; /* Línea separadora arriba */
 }
