@@ -47,7 +47,7 @@ body {
 }
 
 .navbar {
-    background-color: rgb(249, 255, 255);
+    background-color: #FFFFFF;
     display: flex; /*sirve para organizar elementos fácilmente en fila o columna, pone los elementos en horizontal, Se acomodan uno al lado del otro.*/
     align-items: center; /*Alinea los elementos verticalmente al centro.*/
     justify-content: space-between; /*Distribuye los elementos horizontalmente.*/

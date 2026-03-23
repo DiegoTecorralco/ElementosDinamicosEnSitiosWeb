@@ -4,6 +4,7 @@
 const sections = document.querySelectorAll('section'); //Selecciona todas las secciones (<section>) de la página
 const btnPanel = document.getElementById('btn-panel'); //Selecciona el botón para ocultar el panel
 const contenidoPanel = document.getElementById('contenido-panel'); //Selecciona el panel que se va a ocultar
+const cards = document.querySelectorAll('.especialistas-card');
 
 //Evento de Scroll
 window.addEventListener('scroll', () => { //Escucha cuando haces scroll (bajas o subes la página)   
@@ -25,4 +26,16 @@ btnPanel.addEventListener('click', () => {
     ? 'Mostrar Panel' // Si el contenido ESTÁ oculto → dice "Mostrar Panel"
     : 'Ocultar Panel'; // Si el contenido ESTÁ visible → dice "Ocultar Panel"
 });
-    
+
+//Evento mouse
+cards.forEach(card =>{
+    card.addEventListener('mouseenter', () => {
+        card.style.backgroundColor = '#cfdbe7ff';
+        card.style.transform = 'scale(1.05)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.backgroundColor = '';
+        card.style.transform = 'scale(1)';
+    });
+});
