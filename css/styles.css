@@ -368,3 +368,35 @@ section {
        cubic-bezier(0.16, 1, 0.3, 1) → curva de animación personalizada:
        empieza lento, acelera y termina suave (efecto más natural y moderno) */
 }
+
+/*Estilos para Panel*/
+.panel {
+    background-color: #FFFFFF;
+    margin: 0;
+}
+.panel-section {
+    padding: 15px;
+    text-align: center;
+}   
+.panel-section h2 {
+    font-family: Manrope;
+    font-size: 30px;
+}
+.panel-section p {
+    font-family: Inter;
+    color: #3E494A;
+    margin-top: 15px; /*Espacio superior para separar del título*/
+}
+.btn-panel {
+    border: none;
+    border-radius: 15px;
+    background-color: #007B85;
+    font-family: Inter;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Clase específica para ocultar el panel */
+.panel.hidden-panel {
+    display: none;
+}
