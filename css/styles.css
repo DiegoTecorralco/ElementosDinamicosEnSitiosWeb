@@ -346,3 +346,25 @@ footer p {
     padding: 20px 0; /* Espacio arriba y abajo */
     border-top: 1px solid #1E293B; /* Línea separadora arriba */
 }
+
+.hidden {
+    opacity: 0; /* Hace el elemento completamente invisible */
+    transform: translateY(20px); /* Mueve el elemento 20px hacia abajo para crear efecto de entrada */
+}
+
+.visible {
+    opacity: 1; /* Hace el elemento visible */
+    transform: translateY(0); /* Regresa el elemento a su posición original */
+}
+
+section {
+    /* Define la animación cuando cambia de hidden → visible */
+
+    transition: opacity 3.0s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 3.0s cubic-bezier(0.16, 1, 0.3, 1);
+    /* opacity → controla el desvanecimiento (fade in)
+       transform → controla el movimiento vertical
+       3.0s → duración de la animación (muy lenta, se siente más suave pero puede parecer pesada)
+       cubic-bezier(0.16, 1, 0.3, 1) → curva de animación personalizada:
+       empieza lento, acelera y termina suave (efecto más natural y moderno) */
+}
