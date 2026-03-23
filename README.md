@@ -10,11 +10,27 @@ El estudiante desarrollará un sitio web interactivo completo, implementando los
 - **Carrusel de Imágenes:** Galería automática o manual con mínimo 3 imágenes.
 
 ## Wireframes
-[Wireframes](https://www.markdownlang.com)
+[Wireframes](https://www.figma.com/design/Os6npF4HAulI0nbkRTExk4/Clinica-Serenity?node-id=0-1&p=f&t=mgDItrM6wlmYaNQU-0)
 
 ## Paleta de colores
- - Primary: #007B85
- - Secondary: #4D9699
- - Tertiary: #8FBABF
- - parrafos: #3E494A
- - neutral: #F4F7F7
+
+### 🎨 Colores Principales
+- **Primary:** #007B85
+- **Primary Dark:** #006068
+
+### 🧱 Fondos
+- **Background General:** #F1F4F4
+- **Background Cards / Secciones:** #FFFFFF
+- **Footer Background:** #0F172A
+
+### 📝 Texto
+- **Texto Principal:** #3E494A
+- **Texto Navbar:** #475569
+- **Texto Secundario:** #94A3B8
+
+### ✨ Acentos
+- **Accent:** #2DD4BF
+
+### 🌫️ Extras
+- **Sombra:** rgba(0, 0, 0, 0.05)
+- **Navbar Background:** rgb(249, 255, 255)
