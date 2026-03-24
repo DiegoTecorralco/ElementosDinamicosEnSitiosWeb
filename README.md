@@ -21,7 +21,7 @@ El estudiante desarrollará un sitio web interactivo completo, implementando los
 
 
 ## Wireframes
-[Wireframes](https://www.figma.com/design/Os6npF4HAulI0nbkRTExk4/Clinica-Serenity?node-id=3-815&t=YzHNH3zQaH8bBpGj-1)
+[Wireframes en figma](https://www.figma.com/design/Os6npF4HAulI0nbkRTExk4/Clinica-Serenity?node-id=3-815&t=YzHNH3zQaH8bBpGj-1)
 
 ## Paleta de colores
 
