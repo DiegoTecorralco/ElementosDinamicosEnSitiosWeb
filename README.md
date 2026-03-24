@@ -9,6 +9,17 @@ El estudiante desarrollará un sitio web interactivo completo, implementando los
 -  **Manipulación del DOM:** Controlar secciones y menús con botones interactivos.
 - **Carrusel de Imágenes:** Galería automática o manual con mínimo 3 imágenes.
 
+## Tabla de Objetivos Funcionales
+
+| No. | Nombre del Objetivo | Descripción | Estado |
+|-----|---------------------|-------------|--------|
+| 1 | Evento de Scroll | Detectar la posición del usuario al hacer scroll y revelar elementos (secciones) que estaban ocultos con efecto de fade-in y desplazamiento suave. Las secciones `.hidden` cambian a `.visible` cuando entran en el viewport. | ✅ Realizada |
+| 2 | Mostrar / Ocultar | Toggle de visibilidad de un elemento al presionar un botón. El panel de ofertas especiales se oculta/muestra con el botón "Ocultar panel" / "Mostrar panel", aplicando la clase `.hidden-panel`. | ✅ Realizada |
+| 3 | Eventos del Mouse | Responder a `mouseenter`, `mouseleave` y `click` con efectos visuales. Las tarjetas de especialistas cambian de color de fondo (`rgb(244, 244, 244)`) y escala (`scale(1.05)`) al pasar el mouse. El botón del panel también responde al click. | ✅ Realizada |
+| 4 | Carrusel de Imágenes | Galería deslizable con 5 imágenes de especialistas. Incluye navegación manual con botones anterior/siguiente, indicadores (dots) interactivos, y avance automático cada 3 segundos con opción de pausar/reanudar. | ✅ Realizada |
+
+
+
 ## Wireframes
 [Wireframes](https://www.figma.com/design/Os6npF4HAulI0nbkRTExk4/Clinica-Serenity?node-id=3-815&t=YzHNH3zQaH8bBpGj-1)
 
