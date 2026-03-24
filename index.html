@@ -72,40 +72,87 @@
             </div>
         </section>
     </section>
+    
+    <!-- SECCIÓN ESPECIALISTAS CON CARRUSEL -->
     <section class="especialistas hidden">
         <p class="p-resaltado">Especialistas</p>
         <h3>Manos que Atienden tu Cuerpo</h3>
-        <section class="especialistas-container">
-            <div class="especialistas-card uno">
-                <div class="img-especialista">
-                    <img src="./assets/especialista1.png" alt="">
-                    <p class="titulo-especialistas">Dra. Elena Martínez</p>
-                    <p class="descripcion-especialista">Directora Clínica & Osteopatía</p>
+        
+        <!-- Contenedor principal del carrusel -->
+        <div class="carousel-wrapper">
+            <!-- Botón anterior -->
+            <button class="carousel-btn prev-btn" id="prevSlide">❮</button>
+            
+            <!-- Contenedor del track del carrusel -->
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Cada slide se generará dinámicamente con JavaScript -->
+                    <!-- Slide 1: Dra. Elena Martínez -->
+                    <div class="carousel-slide">
+                        <div class="especialistas-card">
+                            <div class="img-especialista">
+                                <img src="./assets/especialista1.png" alt="Dra. Elena Martínez">
+                                <p class="titulo-especialistas">Dra. Elena Martínez</p>
+                                <p class="descripcion-especialista">Directora Clínica & Osteopatía</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Dr. Carlos Ruíz -->
+                    <div class="carousel-slide">
+                        <div class="especialistas-card">
+                            <div class="img-especialista">
+                                <img src="./assets/especialista2.png" alt="Dr. Carlos Ruíz">
+                                <p class="titulo-especialistas">Dr. Carlos Ruíz</p>
+                                <p class="descripcion-especialista">Fisioterapia Deportiva</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Dra. Sofía Alarcón -->
+                    <div class="carousel-slide">
+                        <div class="especialistas-card">
+                            <div class="img-especialista">
+                                <img src="./assets/especialista3.png" alt="Dra. Sofía Alarcón">
+                                <p class="titulo-especialistas">Dra. Sofía Alarcón</p>
+                                <p class="descripcion-especialista">Neurología Funcional</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4: Dr. Miguel Torres -->
+                    <div class="carousel-slide">
+                        <div class="especialistas-card">
+                            <div class="img-especialista">
+                                <img src="./assets/especialista4.png" alt="Dr. Miguel Torres">
+                                <p class="titulo-especialistas">Dr. Miguel Torres</p>
+                                <p class="descripcion-especialista">Rehabilitación Postquirúrgica</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5: Especialista adicional (mínimo 3 imágenes cumplido) -->
+                    <div class="carousel-slide">
+                        <div class="especialistas-card">
+                            <div class="img-especialista">
+                                <img src="./assets/especialista1.png" alt="Lic. Ana Gómez">
+                                <p class="titulo-especialistas">Lic. Ana Gómez</p>
+                                <p class="descripcion-especialista">Terapia Manual Avanzada</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="especialistas-card dos">
-                <div class="img-especialista">
-                    <img src="./assets/especialista2.png" alt="">
-                    <p class="titulo-especialistas">Dr. Carlos Ruíz</p>
-                    <p class="descripcion-especialista">Fisioterapia Deportiva </p>
-                </div>
-            </div>
-            <div class="especialistas-card tres">
-                <div class="img-especialista">
-                    <img src="./assets/especialista3.png" alt="">
-                    <p class="titulo-especialistas">Dra. Sofofía Alarcón</p>
-                    <p class="descripcion-especialista">Neurología Funcional</p>
-                </div>
-            </div>
-            <div class="especialistas-card cuatro">
-                <div class="img-especialista">
-                    <img src="./assets/especialista4.png" alt="">
-                    <p class="titulo-especialistas">Dr. Miguel Torres</p>
-                    <p class="descripcion-especialista">Rehabilitación Postquirúrgica</p>
-                </div>
-            </div>
-        </section>
+            
+            <!-- Botón siguiente -->
+            <button class="carousel-btn next-btn" id="nextSlide">❯</button>
+        </div>
+        
+        <!-- Indicadores (dots) del carrusel -->
+        <div class="carousel-dots" id="carouselDots"></div>
+        
+        <!-- Botón para pausar/reanudar el avance automático -->
+        <div class="auto-control">
+            <button id="toggleAutoBtn" class="toggle-auto-btn">Pausar Automático</button>
+        </div>
     </section>
+    
     <footer>
         <div class="footer-container">
             <div class="section-footer">
