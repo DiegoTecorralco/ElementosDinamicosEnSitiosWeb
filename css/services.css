@@ -1,0 +1,64 @@
+.p-resaltado { /* Selecciona cualquier elemento con la clase "p-resaltado" que esté DENTRO de un contenedor con la clase "servicios-inicio" */
+    font-family: Inter;
+    color:#007B85;
+    margin: 0; /*Elimina el marco por defecto que los navegadores aplican a los elementos <p> */
+    font-weight: bold;
+}
+
+.hero-img-servicios img {
+    width: 700px; /* Tamaño fijo de la imagen */
+    height: 450px;
+    border-radius: 50px; /* Bordes redondeados para estilo moderno */
+}
+
+
+/*Seccion de Servicios*/
+.servicios {
+    padding: 80px 30px;
+}
+
+.contenedor-servicios {
+    display: grid; /* Utiliza un sistema de grid para organizar los servicios en filas y columnas */
+    grid-template-columns: repeat(3, 1fr); /*  3 columnas */;
+    gap: 30px; /* Espacio entre los servicios */
+    padding: 10px;
+}
+.servicio.grande {
+     grid-column: span 2; /* ocupa 2 columnas */
+}
+
+.servicio.pequeña  {
+     grid-column: span 1; /* ocupa 1 columnas */
+}
+
+.servicio {
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 50px;
+}
+.servicio h3 {
+    font-family: manrope;
+    font-weight: bold;
+    font-size: 24px;
+}
+.servicio p {
+    font-family: Inter;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #475569;
+}
+
+.servicio .servicio-link {
+    font-family: Inter;
+    display: inline-block; /* Hace que el elemento se comporte como texto (inline) pero permita aplicar ancho, alto y padding como un bloque */
+    font-weight: bold   ;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #006068;
+    cursor: pointer;
+}
+.servicio .servicio-link:hover {
+    color: #007B85;
+
+}

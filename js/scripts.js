@@ -8,9 +8,9 @@ const contenidoPanel = document.getElementById('contenido-panel');
 // Selecciona todas las tarjetas de especialistas originales (si existen)
 const cards = document.querySelectorAll('.especialistas-card');
 
-// Evento de Scroll - Escucha cuando haces scroll (bajas o subes la página) - ARROW FUNCTION
+// Evento de Scroll - Escucha cuando haces scroll (bajas o subes la página)
 window.addEventListener('scroll', () => {
-    sections.forEach(section => { // Recorre cada sección una por una - ARROW FUNCTION
+    sections.forEach(section => { // Recorre cada sección una por una
         const rect = section.getBoundingClientRect(); // Obtiene la posición de la sección en la pantalla
         // rect.top → qué tan lejos está del borde superior
         // rect.bottom → dónde termina
@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Evento para ocultar el panel - ARROW FUNCTION
+// Evento para ocultar el panel
 btnPanel.addEventListener('click', () => {
     contenidoPanel.classList.toggle('hidden-panel'); // Agrega o quita la clase hidden del panel cada vez que se hace clic en el botón
     btnPanel.textContent = contenidoPanel.classList.contains('hidden-panel') // Cambia el texto del botón dependiendo del estado
@@ -29,7 +29,7 @@ btnPanel.addEventListener('click', () => {
     : 'Ocultar Panel'; // Si el contenido ESTÁ visible → dice "Ocultar Panel"
 });
 
-// Evento mouse para las tarjetas de especialistas (efecto hover) - ARROW FUNCTION
+// Evento mouse para las tarjetas de especialistas (efecto hover)
 cards.forEach(card => { // ARROW FUNCTION
     card.addEventListener('mouseenter', () => { // ARROW FUNCTION
         card.style.backgroundColor = 'rgb(244, 244, 244)';
@@ -43,7 +43,7 @@ cards.forEach(card => { // ARROW FUNCTION
 });
 
 // ==================== CARRUSEL DE ESPECIALISTAS ====================
-// Array con todas las imágenes/información del carrusel (mínimo 3 imágenes - tenemos 5)
+// Array con todas las imágenes/información del carrusel 
 const carouselImages = [
     {
         img: "./assets/especialista1.png",
@@ -82,10 +82,9 @@ const AUTO_DELAY = 3000; // 3 segundos para el avance automático
 const track = document.getElementById('carouselTrack'); // Track que contiene todos los slides
 const prevBtn = document.getElementById('prevSlide'); // Botón anterior
 const nextBtn = document.getElementById('nextSlide'); // Botón siguiente
-const toggleAutoBtn = document.getElementById('toggleAutoBtn'); // Botón pausar/reanudar
 const dotsContainer = document.getElementById('carouselDots'); // Contenedor de los indicadores
 
-// Función para calcular el ancho de cada slide (incluyendo el gap) - ARROW FUNCTION
+// Función para calcular el ancho de cada slide (incluyendo el gap)
 const getSlideWidth = () => {
     const slides = document.querySelectorAll('.carousel-slide');
     if (slides.length === 0) return 0;
@@ -95,7 +94,7 @@ const getSlideWidth = () => {
     return slideWidth + gap;
 };
 
-// Función para actualizar la posición del carrusel según el currentIndex - ARROW FUNCTION
+// Función para actualizar la posición del carrusel según el currentIndex
 const updateCarousel = () => {
     if (!track) return;
     
@@ -111,7 +110,7 @@ const updateCarousel = () => {
     updateDots();
 };
 
-// Función para crear los indicadores (dots) dinámicamente - ARROW FUNCTION
+// Función para crear los indicadores (dots) dinámicamente
 const createDots = () => {
     if (!dotsContainer) return;
     
@@ -124,7 +123,7 @@ const createDots = () => {
         if (i === currentIndex) {
             dot.classList.add('active'); // Marca el dot activo
         }
-        // Agrega evento click para navegar al slide correspondiente - ARROW FUNCTION
+        // Agrega evento click para navegar al slide correspondiente
         dot.addEventListener('click', () => {
             goToSlide(i);
         });
@@ -132,7 +131,7 @@ const createDots = () => {
     }
 };
 
-// Función para actualizar la clase active en los dots - ARROW FUNCTION
+// Función para actualizar la clase active en los dots
 const updateDots = () => {
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => { // ARROW FUNCTION
@@ -144,7 +143,7 @@ const updateDots = () => {
     });
 };
 
-// Función nextSlide() - Avanza a la siguiente imagen - ARROW FUNCTION
+// Función nextSlide() - Avanza a la siguiente imagen
 const nextSlide = () => {
     // Si es la última imagen, vuelve a la primera (efecto infinito)
     if (currentIndex >= carouselImages.length - 1) {
@@ -155,7 +154,7 @@ const nextSlide = () => {
     updateCarousel();
 };
 
-// Función prevSlide() - Retrocede a la imagen anterior - ARROW FUNCTION
+// Función prevSlide() - Retrocede a la imagen anterior
 const prevSlide = () => {
     // Si es la primera imagen, va a la última (efecto infinito)
     if (currentIndex <= 0) {
@@ -166,13 +165,13 @@ const prevSlide = () => {
     updateCarousel();
 };
 
-// Función para ir a un slide específico (usado por los dots) - ARROW FUNCTION
+// Función para ir a un slide específico (usado por los dots)
 const goToSlide = (index) => {
     currentIndex = index;
     updateCarousel();
 };
 
-// Función para iniciar el avance automático (setInterval) - ARROW FUNCTION
+// Función para iniciar el avance automático (setInterval)
 const startAutoPlay = () => {
     if (autoInterval) {
         clearInterval(autoInterval); // Limpia el intervalo existente
@@ -182,41 +181,10 @@ const startAutoPlay = () => {
         nextSlide();
     }, AUTO_DELAY);
     isAutoPlaying = true;
-    if (toggleAutoBtn) {
-        toggleAutoBtn.textContent = 'Pausar Automático';
-    }
 };
 
-// Función para detener el avance automático - ARROW FUNCTION
-const stopAutoPlay = () => {
-    if (autoInterval) {
-        clearInterval(autoInterval);
-        autoInterval = null;
-    }
-    isAutoPlaying = false;
-    if (toggleAutoBtn) {
-        toggleAutoBtn.textContent = 'Reanudar Automático';
-    }
-};
 
-// Función para alternar entre pausar y reanudar el auto - ARROW FUNCTION
-const toggleAutoPlay = () => {
-    if (isAutoPlaying) {
-        stopAutoPlay();
-    } else {
-        startAutoPlay();
-    }
-};
-
-// Función para reiniciar el auto (cuando se navega manualmente) - ARROW FUNCTION
-const resetAutoPlay = () => {
-    if (isAutoPlaying) {
-        stopAutoPlay();
-        startAutoPlay();
-    }
-};
-
-// Evento de click para el botón "siguiente" - ARROW FUNCTION
+// Evento de click para el botón "siguiente"
 if (nextBtn) {
     nextBtn.addEventListener('click', () => { // ARROW FUNCTION
         nextSlide();
@@ -224,7 +192,7 @@ if (nextBtn) {
     });
 }
 
-// Evento de click para el botón "anterior" - ARROW FUNCTION
+// Evento de click para el botón "anterior"
 if (prevBtn) {
     prevBtn.addEventListener('click', () => { // ARROW FUNCTION
         prevSlide();
@@ -232,12 +200,12 @@ if (prevBtn) {
     });
 }
 
-// Evento de click para el botón de pausar/reanudar - ARROW FUNCTION
+// Evento de click para el botón de pausar/reanudar
 if (toggleAutoBtn) {
     toggleAutoBtn.addEventListener('click', toggleAutoPlay);
 }
 
-// Función para inicializar el carrusel - ARROW FUNCTION
+// Función para inicializar el carrusel
 const initCarousel = () => {
     createDots(); // Crea los indicadores
     updateCarousel(); // Posiciona el carrusel en el índice inicial (0)
@@ -249,7 +217,7 @@ if (track && carouselImages.length > 0) {
     initCarousel();
 }
 
-// Ajustar el carrusel cuando la ventana cambie de tamaño (responsive) - ARROW FUNCTION con debounce
+// Ajustar el carrusel cuando la ventana cambie de tamaño (responsive) con debounce
 let resizeTimer;
 window.addEventListener('resize', () => { // ARROW FUNCTION
     // Debounce para evitar muchas ejecuciones

@@ -3,18 +3,23 @@ body {
     margin: 0 ; /* Elimina el margen por defecto que los navegadores aplican al cuerpo de la página para evitar espacios no deseados alrededor del contenido */
 }
 
+/*logo*/
+.navbar h2{
+    color: #134E4A;
+}
+
 /*Contenedor Principal*/
 .hero{
     display: flex; /*Organiza los elementos en fila (horizontal)*/
     align-items: center; /*Alinea los elementos verticalmente al centro*/
     justify-content: space-between; /*Distribuye los elementos horizontalmente con espacio entre ellos*/
-    padding: 70px 30px; /*Espacio interno del contenedor, 50px arriba/abajo, 30px izquierda/derecha*/
+    padding: 50px 30px; /*Espacio interno del contenedor, 50px arriba/abajo, 30px izquierda/derecha*/
     background-color: #FFFFFF;
 }
 
 /* Contenedor del texto */
 .hero-text {
-    max-width:  500px; /*Limita el ancho del texto para mejorar la legibilidad*/
+    max-width:  600px; /*Limita el ancho del texto para mejorar la legibilidad*/
 }
 
 .titulo {
@@ -24,7 +29,7 @@ body {
     margin: 0;/*Elimina el margen por defecto que los navegadores aplican a los elementos <h1> para evitar espacios no deseados entre los títulos*/
 }
 .titulo-secundario {
-    color: #007B85;
+    color: #006068;
     font-weight: bold;
     font-family: Manrope;
     font-size: 55px;    
@@ -41,7 +46,7 @@ body {
 /* Imagen */
 .hero-img img {
     width: 700px; /* Tamaño fijo de la imagen */
-    height: 450px;
+    height: 500px;
     border-radius: 50px; /* Bordes redondeados para estilo moderno */
 }
 
@@ -73,7 +78,7 @@ body {
 }
 
 .navbar-links a.activo {
-    color: #007B85; /* Color diferente para el link seleccionado */
+    color: #0F766E; /* Color diferente para el link seleccionado */
     font-weight: bold; /* Hace el texto del link seleccionado más grueso */
 }
 
@@ -84,7 +89,7 @@ body {
     left: 0;  /* Hace que la línea empiece desde el lado izquierdo del link */
     width: 100%; /* La línea ocupa todo el ancho del link */
     height: 3px; /* Define el grosor de la línea */
-    background: #007B85; 
+    background: #0D9488 ; 
 }
 
 .btn-reserva {
