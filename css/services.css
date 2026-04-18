@@ -60,5 +60,33 @@
 }
 .servicio .servicio-link:hover {
     color: #007B85;
+}
 
+/*Recuperaciòn Seccion*/
+.recuperacion-seccion {
+    padding: 50px 200px;
+}
+
+.recuperacion-container {
+    padding: 100px 150px;
+    background: linear-gradient(to right, #006068, #007B85);
+    border-radius: 30px;
+}
+
+.recuperacion-container h1 {
+    font-family: manrope;
+    font-weight: bold;
+    text-align: center;
+    font-size: 48px;
+    color: #FFFFFF;
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.recuperacion-container p{
+    padding: 30px;
+    font-family: Inter;
+    text-align: center;
+    font-size: 20px;
+    color: #D5FAFF;
+    margin: 0; /* Elimina el margen por defecto */
 }

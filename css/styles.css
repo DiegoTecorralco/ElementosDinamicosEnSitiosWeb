@@ -480,14 +480,28 @@ footer p {
     border-top: 1px solid #1E293B; /* Línea separadora arriba */
 }
 
-.hidden {
-    opacity: 0; /* Hace el elemento completamente invisible */
-    transform: translateY(20px); /* Mueve el elemento 20px hacia abajo para crear efecto de entrada */
+/* --- NUEVAS REGLAS PARA LA ANIMACIÓN MODERNA "UNO POR UNO" --- */
+/* Estado inicial: cada elemento que queremos animar comienza invisible y ligeramente desplazado */
+.hidden-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
+/* Estado visible: el elemento se vuelve opaco y vuelve a su lugar */
 .visible {
-    opacity: 1; /* Hace el elemento visible */
-    transform: translateY(0); /* Regresa el elemento a su posición original */
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Asegúrate de que los elementos que quieres animar tengan la clase 'hidden-element' al inicio.
+   En tu HTML, los elementos como .hero-text, .service-card, etc. deben tener esta clase.
+   Si no, el JavaScript se la añadirá automáticamente al cargar, pero es mejor definirlo.
+   Para que la transición no se vea forzada, aplicamos la clase a todos los elementos que seleccionamos.
+*/
+.hero-text, .hero-img, .service-card, .especialistas-card, .panel, .recuperacion-seccion, .contenedor-servicios .servicio, .footer-container > div {
+    /* Asegura que la transición se aplique a todos estos elementos */
+    transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 section {

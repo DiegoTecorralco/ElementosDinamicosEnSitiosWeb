@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,7 @@
     <link rel="stylesheet" href="css/services.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Manrope&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <title>Services - Clinica Serenity</title>
+    <title>Servicios - Clinica Serenity</title>
 </head>
 
 <body>
@@ -34,33 +33,33 @@
             <img src="./assets/sala servicios.png" alt="SERVICIOS ">
         </section>
     </section>
-    <section class="servicios">
+    <section class="servicios hidden">
         <div class="contenedor-servicios">
-            <div class="servicio grande">
+            <div class="servicio grande" id="rehabilitacion-deportiva">
                 <h3>Rehabilitación Deportiva</h3>
                 <p>Diseñado para atletas de todos los niveles. Enfocado en una vuelta segura al entrenamiento,
                     previniendo recaídas y optimizando la biomecánica deportiva.</p>
                 <p class="servicio-link">Saber Más</p>
             </div>
-            <div class="servicio pequeña">
+            <div class="servicio pequeña" id="puncion-seca">
                 <h3>Punción Seca</h3>
                 <p>Tratamiento invasivo para el síndrome de dolor miofascial, eliminando puntos gatillo mediante
                     agujas de acupuntura.</p>
                 <p class="servicio-link">Saber Más</p>
             </div>
-            <div class="servicio pequeña">
+            <div class="servicio pequeña" id="pilates-clinico">
                 <h3>Pilates Clínico</h3>
                 <p>Ejercicios terapéuticos adaptados a patologías específicas de columna y control postural bajo
                     supervisión fisioterapéutica.</p>
                 <p class="servicio-link">Saber Más</p>
             </div>
-            <div class="servicio pequeña">
+            <div class="servicio pequeña" id="readaptacion-funcional">
                 <h3>Readaptación Funcional</h3>
                 <p>El puente entre la camilla y la vida diaria. Entrenamos el movimiento real para que vuelvas a tus
                     actividades sin miedo.</p>
                 <p class="servicio-link">Saber Más</p>
             </div>
-            <div class="servicio pequeña">
+            <div class="servicio pequeña" id="fisioterapia-suelo-pelvico">
                 <h3>Fisioterapia Suelo Pélvico</h3>
                 <p>Especialidad dedicada a la prevención y tratamiento de disfunciones uroginecológicas y
                     coloproctológicas.</p>
@@ -68,6 +67,43 @@
             </div>
         </div>
     </section>
-</body>
+    <section class="recuperacion-seccion hidden">
+        <div class="recuperacion-container">
+            <h1>¿Listo para comenzar tu recuperación?</h1>
+            <p>Agenda una evaluación inicial hoy mismo. Nuestros especialistas diseñarán un plan de tratamiento personalizado según tus necesidades específicas.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="section-footer">
+                <h1>Clinical Serenity</h1>
+                <p>
+                    Fisioterapia especializada en recuperar tu equilibrio físico y mental
+                    a través de un enfoque personalizado y humano.
+                </p>
+            </div>
+            <div class="section-footer">
+                <h2>Servicios</h2>
+                <ul class="footer-links">
+                    <li><a href="#rehabilitacion-deportiva">Rehabilitación Deportiva</a></li>
+                    <li><a href="#puncion-seca">Punción Seca</a></li>
+                    <li><a href="#pilates-clinico">Pilates Clínico</a></li>
+                    <li><a href="#readaptacion-funcional">Readaptación Funcional</a></li>
+                    <li><a href="#fisioterapia-suelo-pelvico">Fisioterapia Suelo Pélvico</a></li>
+                </ul>
+            </div>
+            <div class="section-footer">
+                <h2>Contacto</h2>
+                <p>info@clinicalserenity.com</p>
+                <P>+34 900 123 456</P>
+            </div>
 
+        </div>
+
+        <p class="p-derechos">
+            © 2026 Clinical Serenity Physiotherapy. All rights reserved.
+        </p>
+    </footer>
+    <script src="./js/scripts.js"></script>
+</body>
 </html>
